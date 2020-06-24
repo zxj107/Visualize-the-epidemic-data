@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>数据统计网站-浙江</title>
+<link rel="stylesheet" type="text/css" href="CSS/daohanglan.css">
+<link rel="stylesheet" type="text/css" href="CSS/zhengti.css">
+<link rel="stylesheet" type="text/css" href="CSS/zuoyoulan.css">
+<link rel="stylesheet" type="text/css" href="CSS/dibu.css">
+<link rel="stylesheet" type="text/css" href="CSS/biaoge.css">
+<link rel="stylesheet" type="text/css" href="CSS/shurukuang.css">
+<link rel="stylesheet" type="text/css" href="CSS/xiangying.css">
+<link rel="stylesheet" type="text/css" href="CSS/huandengpian.css">
+  <style>
+img
+{
+  position:absolute;
+}
+
+  </style>
+</head>
+
+<body>
+<div class="header">
+<div id="times"></div>
+<h1 style="text-shadow: 2px 2px #8888ff;">新冠肺炎数据统计网站-浙江</h1>
+</div>
+
+<div class="topnav">
+<a href="index.html">首页</a>
+<a href="hb.html">湖北</a>
+<a href="gd.html">广东</a>
+<a href="zj.html">浙江</a>
+<a href="hn.html">河南</a>
+<a href="sd.html">山东</a>
+ <audio controls style="float: right;">
+ <source src="song.mp3" type="audio/mpeg">
+您的浏览器不支持 audio 元素
+</audio> 
+</div>
+ 
+
+<div class="row">
+
+ <div class="leftcolumn">
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 3</div>
+             <img src="p1.jpg" style="width:100%">
+        </div>
+ 
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 3</div>
+             <img src="p2.jpg" style="width:100%">
+        </div>
+ 
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 3</div>
+            <img src="p3.jpg" style="width:100%">
+        </div>
+ 
+      <a class="prev" onclick="plusSlides(-1)">❮</a>
+      <a class="next" onclick="plusSlides(1)">❯</a>
+</div>
+<br>
+ 
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+
+
+
+   <div class="card">
+      <h2>日期选择</h2>
+     <div  style="padding-left: 40px;"> 
+       <form>
+        <input type="text" id="inputdate">
+      </form>
+      <button type="button" onclick="myFunction()">确认</button>
+      <p><b>请在此输入日期:</b><br> 
+      从1月19日到2月26日（形式为x月x日）</p>
+      <p id="lala"></p>
+    </div>
+   </div> 
+    <div class="card">
+      <h2>疫情</h2>
+      <h5 id="显示日期"></h5>
+      <table>
+        <tr>
+          <tr>
+            <td>现有确诊病例</td>
+            <td id="现有确诊病例"></td>
+          </tr> 
+          <tr>
+            <td>累计确诊病例</td>
+            <td id="累计确诊病例"></td>
+          </tr>
+          <tr>
+            <td>死亡病例</td>
+            <td id="死亡病例"></td>
+          </tr>
+          <tr>
+            <td>治愈病例</td>
+            <td id="治愈病例"></td>
+          </tr>
+          
+        </tr>
+
+
+      </table>
+    </div>
+
+  </div>
+
+
+
+  <div class="rightcolumn">
+
+
+    <div class="card">
+      <h2>数据曲线</h2>
+       <div id="chart" style="width: 700px;height:400px;"></div>
+      <script src="JS/echarts.min.js"></script>
+       <script src="JS/zjzx.js"></script>
+    </div>
+
+    <div class="card">
+      <h2>疫情地图</h2>
+      <div id="zhejiangmap" style="width: 600px;height: 450px;margin: 0px auto">     </div>
+      <div id="zhejiangmap1" style="display: none;width: 600px;height: 450px;margin: 0px auto">     </div>
+      <div id="zhejiangmap2" style="display: none;width: 600px;height: 450px;margin: 0px auto">     </div>
+        <script src="JS/zhejiang.js"></script>
+        <script src="JS/zhejiangmap.js"></script>
+        <script src="JS/zhejiangmap1.js"></script> 
+        <script src="JS/zhejiangmap2.js"></script> 
+      <button type="button" onclick="divSW()">现有确诊病例</button>
+      <button type="button" onclick="divSW1()">累计确诊病例</button>
+      <button type="button" onclick="divSW2()">累计死亡病例</button>
+     <script>
+var dv = document.getElementById( "zhejiangmap" );
+var dv1 = document.getElementById( "zhejiangmap1" );
+var dv2 = document.getElementById( "zhejiangmap2" );
+function divSW() {
+       dv.style.display = "block";
+       dv1.style.display = "none"; 
+       dv2.style.display = "none"; 
+   }
+function divSW1() {
+       dv.style.display = "none"; 
+       dv1.style.display = "block";
+       dv2.style.display = "none";
+   }        
+function divSW2() {
+       dv.style.display = "none"; 
+       dv1.style.display = "none";
+       dv2.style.display = "block";
+   }   
+    </script>
+      
+    </div>
+ 
+  </div>
+</div>
+
+<div class="footer">
+  <h2>信息来源</h2>
+<div class="footie">
+  <p>全国：<a href="http://www.nhc.gov.cn/xcs/yqtb/list_gzbd.shtml">中华人民共和国国家卫生健康委员会</a></p>
+  <p>湖北：<a href="http://wjw.hubei.gov.cn/bmdt/ztzl/fkxxgzbdgrfyyq/xxfb/">湖北省卫生健康委员会</a></p>
+</div>
+<div class="footie"> 
+  <p>广东：<a href="http://wsjkw.gd.gov.cn/zwyw_yqxx/index.html">广东省卫生健康委员会</a></p>
+  <p>河南：<a href="http://www.hnwsjsw.gov.cn/channels/858.shtml">河南省卫生健康委员会</a></p>
+</div>
+<div class="footie" >
+  <p>浙江：<a href="http://www.zjwjw.gov.cn/col/col1202101/index.html">浙江省卫生健康委员会</a></p>
+  <p>山东：<a href="http://wsjkw.shandong.gov.cn/ztzl/rdzt/qlzhfkgz/tzgg/">山东省卫生健康委员会</a></p>
+</div>
+</div>
+
+<script src="JS/huandengpian.js" type="text/javascript"></script>
+<script src="JS/zjbg.js" type="text/javascript"></script>
+<script>
+  //得到时间并写入div
+             function getDate(){
+                 //获取当前时间
+                 var date = new Date();
+                 //格式化为本地时间格式
+                 var date1 = date.toLocaleString();
+                 //获取div
+                 document.getElementById("times").innerHTML=date1;
+             }
+             //使用定时器每秒向div写入当前时间
+             setInterval("getDate()",1000);
+
+
+ 
+
+  </script>
+
+</body>
+</html>

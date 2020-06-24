@@ -1,0 +1,14 @@
+/*表格*/
+table {
+    border-collapse: collapse;
+    margin-left: 35px;
+}
+
+table, td, th {
+    border: 1px solid black;
+}
+td{
+  width: 160px;
+  height: 40px;
+  text-align: center;
+}

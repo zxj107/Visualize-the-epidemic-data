@@ -1,0 +1,25 @@
+/* 导航条 */
+.topnav {
+  margin-top: 0px;
+  padding-top: 0px;
+  overflow: hidden;
+  background-color: lightblue;
+}
+ 
+/* 导航条链接 */
+.topnav a {
+  font-size: 17px;
+  float: left;
+  display: block;
+  color: purple;
+  text-align: center;
+  padding: 15px 35px;
+  text-decoration: none;
+}
+ 
+/* 链接颜色修改 */
+.topnav a:hover {
+  transition-duration: 800ms;
+  background-color: #ddccaa;
+  color: black;
+}

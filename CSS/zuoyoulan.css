@@ -1,0 +1,29 @@
+
+/* 创建两列 */
+/* Left column */
+.leftcolumn {   
+  float: left;
+  width: 35%;
+}
+ 
+/* 右侧栏 */
+.rightcolumn {
+  float: left;
+  width: 65%;
+  background-color: #e0ffff;
+  padding-left: 20px;
+}
+ 
+/* 文章卡片效果 */
+.card {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+}
+ 
+/* 列后面清除浮动 */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}

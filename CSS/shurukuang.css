@@ -1,0 +1,31 @@
+
+/*文本输入框*/
+input[type=text], select {
+  width: 70%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/*按钮*/
+button {
+    background-color: #4490f7;
+    opacity: 0.6;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    padding: 8px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+button:hover{
+  opacity: 1;
+  transition-duration: 500ms;
+}
